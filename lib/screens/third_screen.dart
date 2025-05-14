@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/widgets/custom_widgets.dart';
 
 class ThirdScreen extends StatefulWidget {
   const ThirdScreen({super.key});
@@ -20,93 +21,105 @@ class _ThirdScreenState extends State<ThirdScreen> {
           ),
           Container(
             width: double.infinity,
-            height: 280,
+            height: 260,
             color: Color.fromRGBO(42, 75, 160, 1),
           ),
+          GroupOne(),
+          SearchItem(),
+          // Positioned(
+          //   top: 202,
+          //   left: 20,
+          //   child: Container(width: 335.94, height: 38, color: Colors.black),
+          // ),
+          // Positioned(
+          //   top: 202,
+          //   left: 20,
+          //   child: Container(width: 173.94, height: 38, color: Colors.white),
+          // ),
+          // Positioned(
+          //   top: 202,
+          //   left: 298,
+          //   child: Container(width: 57.94, height: 38, color: Colors.white),
+          // ),
           Positioned(
-            top: 52,
+            top: 202,
             left: 20,
             child: Container(
-              width: 120,
-              height: 30,
+              width: 72,
+              height: 19,
+              // color: Colors.red,
               child: Text(
-                "Hey, Mohib",
+                "DELIVERY TO",
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 11,
                   fontFamily: "Manrope",
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.blueGrey,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 221,
+            left: 20,
+            child: Container(
+              width: 190,
+              height: 19,
+              // color: Colors.orange
+              child: Text(
+                "Green Way 3000, Sylhet",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w500,
                   color: Color.fromRGBO(248, 249, 251, 1),
                 ),
               ),
             ),
           ),
           Positioned(
-            top: 53,
-            left: 335,
+            top: 202,
+            left: 298,
             child: Container(
-              width: 24,
-              height: 24,
-              child: Image.asset(
-                "assets/images/icon_images/bag.png",
-                color: Colors.white,
+              width: 49,
+              height: 15,
+              // color: Colors.orange,
+              child: Text(
+                "WITH IN",
+                style: TextStyle(
+                  fontSize: 11,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w800,
+                  color: Colors.blueGrey,
+                ),
               ),
             ),
           ),
           Positioned(
-            top: 117,
-            left: 20,
+            top: 221,
+            left: 298,
             child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Color.fromRGBO(21, 48, 117, 1),
+              width: 57.94,
+              height: 19,
+              // color: Colors.pink,
+              child: Text(
+                "1 Hour",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(248, 249, 251, 1),
+                ),
               ),
-              width: 335,
-              height: 56,
-              child: TextField(),
             ),
-          ),
-          Positioned(
-            top: 202,
-            left: 20,
-            child: Container(width: 335.94, height: 38, color: Colors.black),
-          ),
-          Positioned(
-            top: 202,
-            left: 20,
-            child: Container(width: 173.94, height: 38, color: Colors.white),
-          ),
-          Positioned(
-            top: 202,
-            left: 298,
-            child: Container(width: 57.94, height: 38, color: Colors.white),
-          ),
-          Positioned(
-            top: 202,
-            left: 20,
-            child: Container(width: 71, height: 15, color: Colors.red),
-          ),
-          Positioned(
-            top: 221,
-            left: 20,
-            child: Container(width: 173.94, height: 19, color: Colors.orange),
-          ),
-          Positioned(
-            top: 202,
-            left: 298,
-            child: Container(width: 42, height: 15, color: Colors.orange),
-          ),
-          Positioned(
-            top: 221,
-            left: 298,
-            child: Container(width: 57.94, height: 19, color: Colors.pink),
           ),
           Positioned(
             top: 279,
             left: 20,
             child: Container(
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery.of(context).size.width - 40,
               height: 123,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -114,13 +127,155 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     Container(
                       width: 269,
                       height: 123,
-                      color: Colors.deepOrange,
+                      // color: Colors.deepOrange,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromRGBO(249, 176, 35, 1),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 68,
+                            height: 68,
+                            margin: EdgeInsets.only(left: 42),
+                            // color: Colors.black,
+                            child: Image.asset(
+                              "assets/images/icon_images/Group.png",
+                            ),
+                          ),
+                          Container(
+                            width: 125,
+                            height: 120,
+                            // color: Colors.red,
+                            margin: EdgeInsets.only(left: 20),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 120,
+                                  height: 20,
+                                  // color: Colors.amber,
+                                  child: Text(
+                                    "Get",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w100,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 120,
+                                  height: 33,
+                                  // color: Colors.blue,
+                                  child: Text(
+                                    "50% OFF",
+                                    style: TextStyle(
+                                      fontSize: 26,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w900,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 140,
+                                  height: 20,
+                                  // color: Colors.white,
+                                  child: Text(
+                                    "On first 03 Order",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w100,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(width: 18),
                     Container(
                       width: 269,
                       height: 123,
-                      color: Colors.greenAccent,
+                      // color: Colors.deepOrange,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromRGBO(207, 203, 196, 1),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 68,
+                            height: 68,
+                            margin: EdgeInsets.only(left: 42),
+                            // color: Colors.black,
+                            child: Image.asset(
+                              "assets/images/icon_images/Group.png",
+                            ),
+                          ),
+                          Container(
+                            width: 125,
+                            height: 120,
+                            // color: Colors.red,
+                            margin: EdgeInsets.only(left: 20),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 120,
+                                  height: 20,
+                                  // color: Colors.amber,
+                                  child: Text(
+                                    "Get",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w100,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 120,
+                                  height: 33,
+                                  // color: Colors.blue,
+                                  child: Text(
+                                    "50% OFF",
+                                    style: TextStyle(
+                                      fontSize: 26,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w900,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 140,
+                                  height: 20,
+                                  // color: Colors.white,
+                                  child: Text(
+                                    "On first 03 Order",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontFamily: "Manrope",
+                                      fontWeight: FontWeight.w100,
+                                      color: Color.fromRGBO(248, 249, 251, 1),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -130,7 +285,19 @@ class _ThirdScreenState extends State<ThirdScreen> {
           Positioned(
             top: 429,
             left: 20,
-            child: Container(width: 210, height: 38, color: Colors.blue),
+            child: Container(
+              width: 230,
+              height: 38,
+              // color: Colors.red,
+              child: Text(
+                "Recommended",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w100,
+                ),
+              ),
+            ),
           ),
           Positioned(
             top: 485,
