@@ -691,6 +691,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   ),
                 ),
               ),
+
+              // Bottom Nav Bar
+              BottomNavBar(),
             ],
           );
         },
