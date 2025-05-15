@@ -347,6 +347,8 @@ class _RecommendedCardState extends State<RecommendedCard> {
   }
 }
 
+
+// bottom Nav bar
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
