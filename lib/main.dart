@@ -3,8 +3,13 @@ import 'package:mini_project/screens/first_screen.dart';
 import 'package:mini_project/screens/second-screen.dart';
 import 'package:mini_project/screens/third_screen.dart';
 import 'package:mini_project/widgets/custom_widgets.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Hide nav bar and status bar
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const MyApp());
 }
 

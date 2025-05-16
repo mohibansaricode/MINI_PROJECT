@@ -347,8 +347,179 @@ class _RecommendedCardState extends State<RecommendedCard> {
   }
 }
 
+// // bottom Nav bar
+// class BottomNavBar extends StatefulWidget {
+//   const BottomNavBar({super.key});
 
-// bottom Nav bar
+//   @override
+//   State<BottomNavBar> createState() => _BottomNavBarState();
+// }
+
+// class _BottomNavBarState extends State<BottomNavBar> {
+//   @override
+//   Widget build(BuildContext context) {
+//     final screenWidth = MediaQuery.of(context).size.width;
+//     final scaleFactor = screenWidth / 375;
+//     int buttonIndex = 0;
+
+//     return SafeArea(
+//       bottom: true,
+//       child: Stack(
+//         children: [
+//           //Parent Box
+//           Positioned(
+//             top: 500 * scaleFactor,
+//             bottom: 0,
+//             child: Container(
+//               width: 375 * scaleFactor,
+//               height: 103 * scaleFactor,
+//               // color: Colors.amber,
+//               child: Stack(
+//                 //main  Box
+//                 children: [
+//                   Positioned(
+//                     top: 14 * scaleFactor,
+//                     child: Container(
+//                       width: 375 * scaleFactor,
+//                       height: 89 * scaleFactor,
+//                       // color: Colors.black,
+//                     ),
+//                   ),
+//                   // rounded box
+//                   Positioned(
+//                     top: 14 * scaleFactor,
+//                     child: Container(
+//                       width: 375 * scaleFactor,
+//                       height: 89 * scaleFactor,
+//                       decoration: BoxDecoration(
+//                         borderRadius: BorderRadius.circular(30),
+//                         color: Color.fromRGBO(255, 255, 255, 1),
+//                       ),
+//                     ),
+//                   ),
+//                   // Home
+//                   Positioned(
+//                     left: 25 * scaleFactor,
+//                     child: Container(
+//                       width: 60 * scaleFactor,
+//                       height: 60 * scaleFactor,
+//                       decoration: BoxDecoration(
+//                         borderRadius: BorderRadius.circular(29 * scaleFactor),
+//                         color: Colors.black,
+//                       ),
+//                       child: IconButton(
+//                         onPressed: () {
+//                           setState(() {
+//                             buttonIndex = 0;
+//                           });
+//                         },
+//                         icon: Icon(
+//                           Icons.home_rounded,
+//                           color: Color.fromRGBO(224, 180, 32, 1),
+//                         ),
+//                       ),
+//                     ),
+//                   ),
+//                   // category
+//                   Positioned(
+//                     top: 30 * scaleFactor,
+//                     left: 110 * scaleFactor,
+//                     child: Container(
+//                       width: 70 * scaleFactor,
+//                       height: 75 * scaleFactor,
+//                       // color: Colors.blue,
+//                       child: Column(
+//                         children: [
+//                           IconButton(
+//                             onPressed: () {},
+//                             icon: Icon(
+//                               Icons.category,
+//                               color: Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           Text(
+//                             "Categories",
+//                             style: TextStyle(
+//                               fontSize: 12,
+//                               fontFamily: "Manrope",
+//                               fontWeight: FontWeight.w500,
+//                               color: Color.fromRGBO(136, 145, 165, 1),
+//                             ),
+//                           ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                   // favorite
+//                   Positioned(
+//                     top: 30 * scaleFactor,
+//                     left: 210 * scaleFactor,
+//                     child: Container(
+//                       width: 60 * scaleFactor,
+//                       height: 70 * scaleFactor,
+//                       // color: Colors.blue,
+//                       child: Column(
+//                         children: [
+//                           IconButton(
+//                             onPressed: () {},
+//                             icon: Icon(
+//                               Icons.favorite_rounded,
+//                               color: Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           Text(
+//                             "Favourite",
+//                             style: TextStyle(
+//                               fontSize: 12,
+//                               fontFamily: "Manrope",
+//                               fontWeight: FontWeight.w500,
+//                               color: Color.fromRGBO(136, 145, 165, 1),
+//                             ),
+//                           ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                   // More
+//                   Positioned(
+//                     top: 30 * scaleFactor,
+//                     left: 290 * scaleFactor,
+//                     child: Container(
+//                       width: 60 * scaleFactor,
+//                       height: 70 * scaleFactor,
+//                       // color: Colors.blue,
+//                       child: Column(
+//                         children: [
+//                           IconButton(
+//                             onPressed: () {},
+//                             icon: Icon(
+//                               Icons.more_horiz_rounded,
+//                               color: Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           Text(
+//                             "More",
+//                             style: TextStyle(
+//                               fontSize: 12,
+//                               fontFamily: "Manrope",
+//                               fontWeight: FontWeight.w500,
+//                               color: Color.fromRGBO(136, 145, 165, 1),
+//                             ),
+//                           ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
@@ -357,157 +528,210 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final scaleFactor = screenWidth / 375;
 
-    return Stack(
-      children: [
-        //Parent Box
-        Positioned(
-          top: 680 * scaleFactor,
-          child: Container(
-            width: 375 * scaleFactor,
-            height: 103 * scaleFactor,
-            // color: Colors.amber,
-            child: Stack(
-              //main  Box
-              children: [
-                Positioned(
-                  top: 14 * scaleFactor,
-                  child: Container(
-                    width: 375 * scaleFactor,
-                    height: 89 * scaleFactor,
-                    // color: Colors.black,
-                  ),
-                ),
-                // rounded box
-                Positioned(
-                  top: 14 * scaleFactor,
-                  child: Container(
-                    width: 375 * scaleFactor,
-                    height: 89 * scaleFactor,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                    ),
-                  ),
-                ),
-                // Home
-                Positioned(
-                  left: 25 * scaleFactor,
-                  child: Container(
-                    width: 60 * scaleFactor,
-                    height: 60 * scaleFactor,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(29 * scaleFactor),
-                      color: Colors.black,
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.home_rounded,
-                        color: Color.fromRGBO(224, 180, 32, 1),
+    return SafeArea(
+      bottom: true,
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: 0,
+            child: Container(
+              width: 375 * scaleFactor,
+              height: 103 * scaleFactor,
+              child: Stack(
+                children: [
+                  // Background box
+                  Positioned(
+                    top: 14 * scaleFactor,
+                    child: Container(
+                      width: 375 * scaleFactor,
+                      height: 89 * scaleFactor,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Color.fromRGBO(255, 255, 255, 1),
                       ),
                     ),
                   ),
-                ),
-                // category
-                Positioned(
-                  top: 30 * scaleFactor,
-                  left: 110 * scaleFactor,
-                  child: Container(
-                    width: 70 * scaleFactor,
-                    height: 75 * scaleFactor,
-                    // color: Colors.blue,
-                    child: Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.category,
-                            color: Color.fromRGBO(62, 69, 84, 1),
+
+                  // HOME
+                  Positioned(
+                    top: selectedIndex == 0 ? 0 : 14 * scaleFactor,
+                    left: 25 * scaleFactor,
+                    child: GestureDetector(
+                      onTap: () => setState(() => selectedIndex = 0),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 60 * scaleFactor,
+                            height: 60 * scaleFactor,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color:
+                                  selectedIndex == 0
+                                      ? Colors.black
+                                      : Colors.transparent,
+                            ),
+                            child: Image.asset(
+                              "assets/images/icon_images/home.png",
+                              color:
+                                  selectedIndex == 0
+                                      ? Color.fromRGBO(224, 180, 32, 1)
+                                      : Color.fromRGBO(62, 69, 84, 1),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Categories",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: "Manrope",
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromRGBO(136, 145, 165, 1),
-                          ),
-                        ),
-                      ],
+                          if (selectedIndex != 0) SizedBox(height: 4),
+                          if (selectedIndex != 0)
+                            Text(
+                              "Home",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(136, 145, 165, 1),
+                                fontFamily: "Manrope",
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                // favorite
-                Positioned(
-                  top: 30 * scaleFactor,
-                  left: 210 * scaleFactor,
-                  child: Container(
-                    width: 60 * scaleFactor,
-                    height: 70 * scaleFactor,
-                    // color: Colors.blue,
-                    child: Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.favorite_rounded,
-                            color: Color.fromRGBO(62, 69, 84, 1),
+
+                  // CATEGORY
+                  Positioned(
+                    top: selectedIndex == 1 ? 0 : 14 * scaleFactor,
+                    left: 110 * scaleFactor,
+                    child: GestureDetector(
+                      onTap: () => setState(() => selectedIndex = 1),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 60 * scaleFactor,
+                            height: 60 * scaleFactor,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color:
+                                  selectedIndex == 1
+                                      ? Colors.black
+                                      : Colors.transparent,
+                            ),
+                            child: Image.asset(
+                              "assets/images/icon_images/Category.png",
+                              color:
+                                  selectedIndex == 1
+                                      ? Color.fromRGBO(224, 180, 32, 1)
+                                      : Color.fromRGBO(62, 69, 84, 1),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Favourite",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: "Manrope",
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromRGBO(136, 145, 165, 1),
-                          ),
-                        ),
-                      ],
+                          if (selectedIndex != 1) SizedBox(height: 4),
+                          if (selectedIndex != 1)
+                            Text(
+                              "Category",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(136, 145, 165, 1),
+                                fontFamily: "Manrope",
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                // More
-                Positioned(
-                  top: 30 * scaleFactor,
-                  left: 290 * scaleFactor,
-                  child: Container(
-                    width: 60 * scaleFactor,
-                    height: 70 * scaleFactor,
-                    // color: Colors.blue,
-                    child: Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.more_horiz_rounded,
-                            color: Color.fromRGBO(62, 69, 84, 1),
+
+                  // FAVOURITE
+                  Positioned(
+                    top: selectedIndex == 2 ? 0 : 14 * scaleFactor,
+                    left: 210 * scaleFactor,
+                    child: GestureDetector(
+                      onTap: () => setState(() => selectedIndex = 2),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 60 * scaleFactor,
+                            height: 60 * scaleFactor,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color:
+                                  selectedIndex == 2
+                                      ? Colors.black
+                                      : Colors.transparent,
+                            ),
+                            child: Image.asset(
+                              "assets/images/icon_images/Heart.png",
+                              color:
+                                  selectedIndex == 2
+                                      ? Color.fromRGBO(224, 180, 32, 1)
+                                      : Color.fromRGBO(62, 69, 84, 1),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "More",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: "Manrope",
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromRGBO(136, 145, 165, 1),
-                          ),
-                        ),
-                      ],
+                          if (selectedIndex != 2) SizedBox(height: 4),
+                          if (selectedIndex != 2)
+                            Text(
+                              "Favourite",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(136, 145, 165, 1),
+                                fontFamily: "Manrope",
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+
+                  // MORE
+                  Positioned(
+                    top: selectedIndex == 3 ? 0 : 14 * scaleFactor,
+                    left: 290 * scaleFactor,
+                    child: GestureDetector(
+                      onTap: () => setState(() => selectedIndex = 3),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 60 * scaleFactor,
+                            height: 60 * scaleFactor,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color:
+                                  selectedIndex == 3
+                                      ? Colors.black
+                                      : Colors.transparent,
+                            ),
+                            child: Image.asset(
+                              "assets/images/icon_images/more_vertical.png",
+                              color:
+                                  selectedIndex == 3
+                                      ? Color.fromRGBO(224, 180, 32, 1)
+                                      : Color.fromRGBO(62, 69, 84, 1),
+                            ),
+                          ),
+                          if (selectedIndex != 3) SizedBox(height: 4),
+                          if (selectedIndex != 3)
+                            Text(
+                              "More",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(136, 145, 165, 1),
+                                fontFamily: "Manrope",
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
