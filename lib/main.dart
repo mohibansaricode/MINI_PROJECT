@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/screens/fifth_screen.dart';
 import 'package:mini_project/screens/first_screen.dart';
 import 'package:mini_project/screens/fourth_screen.dart';
 import 'package:mini_project/screens/second-screen.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: FourthScreen(),
-      home: PageView(children: [FirstScreen(), SecondScreen()]),
+      // home: PageView(children: [FirstScreen(), SecondScreen()]),
+      home: FifthScreen(),
     );
   }
 }
