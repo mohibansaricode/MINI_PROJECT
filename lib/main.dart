@@ -3,6 +3,7 @@ import 'package:mini_project/screens/first_screen.dart';
 import 'package:mini_project/screens/fourth_screen.dart';
 import 'package:mini_project/screens/second-screen.dart';
 import 'package:flutter/services.dart';
+import 'package:mini_project/widgets/custom_widgets.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

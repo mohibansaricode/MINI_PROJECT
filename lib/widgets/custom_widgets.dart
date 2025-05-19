@@ -562,3 +562,72 @@ class _BottomNavBarState extends State<BottomNavBar> {
     );
   }
 }
+
+class CategoryCard extends StatelessWidget {
+  final String categoryName;
+  final String categoryTypeName;
+  const CategoryCard({
+    super.key,
+    required this.categoryName,
+    required this.categoryTypeName,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        width: 154,
+        height: 164,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Color.fromRGBO(171, 175, 181, 1),
+        ),
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Container(
+              width: 68,
+              height: 68,
+              color: Colors.black,
+              child: Image.asset("assets/images/icon_images/Group.png"),
+            ),
+            SizedBox(height: 10),
+            Container(
+              width: 98,
+              height: 2,
+              color: Color.fromRGBO(224, 226, 238, 1),
+            ),
+            SizedBox(height: 10),
+            Container(
+              width: 40,
+              height: 18,
+              child: Text(
+                categoryName,
+                style: TextStyle(
+                  fontSize: 13,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Container(
+              width: 53,
+              height: 16,
+              child: Text(
+                categoryTypeName,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: "Manrope",
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -280,12 +280,107 @@ class _FourthScreenState extends State<FourthScreen> {
                             width: 154,
                             height: 164,
                             color: Colors.amber,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
                           ),
                           SizedBox(width: 19),
                           Container(
                             width: 154,
                             height: 164,
                             color: Colors.black,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 164,
+                      color: Colors.red,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.amber,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                          SizedBox(width: 19),
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.black,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 164,
+                      color: Colors.red,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.amber,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                          SizedBox(width: 19),
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.black,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 164,
+                      color: Colors.red,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.amber,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
+                          ),
+                          SizedBox(width: 19),
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.black,
+                            child: CategoryCard(
+                              categoryName: "Meats",
+                              categoryTypeName: "Organic",
+                            ),
                           ),
                         ],
                       ),
