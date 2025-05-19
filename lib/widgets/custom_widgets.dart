@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/screens/fourth_screen.dart';
+import 'package:mini_project/screens/third_screen.dart';
 
 class GroupOne extends StatefulWidget {
   const GroupOne({super.key});
@@ -347,212 +349,440 @@ class _RecommendedCardState extends State<RecommendedCard> {
   }
 }
 
+// class BottomNavBar extends StatefulWidget {
+//   const BottomNavBar({super.key});
+
+//   @override
+//   State<BottomNavBar> createState() => _BottomNavBarState();
+// }
+
+// class _BottomNavBarState extends State<BottomNavBar> {
+//   int selectedIndex = 0;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final screenWidth = MediaQuery.of(context).size.width;
+//     final scaleFactor = screenWidth / 375;
+
+//     return SafeArea(
+//       bottom: true,
+//       child: Stack(
+//         children: [
+//           Positioned(
+//             bottom: 0,
+//             child: Container(
+//               width: 375 * scaleFactor,
+//               height: 103 * scaleFactor,
+//               child: Stack(
+//                 children: [
+//                   // Background box
+//                   Positioned(
+//                     top: 14 * scaleFactor,
+//                     child: Container(
+//                       width: 375 * scaleFactor,
+//                       height: 89 * scaleFactor,
+//                       decoration: BoxDecoration(
+//                         borderRadius: BorderRadius.circular(30),
+//                         color: Color.fromRGBO(255, 255, 255, 1),
+//                       ),
+//                     ),
+//                   ),
+
+//                   // HOME
+//                   Positioned(
+//                     top: selectedIndex == 0 ? 0 : 14 * scaleFactor,
+//                     left: 25 * scaleFactor,
+//                     child: GestureDetector(
+//                       onTap: () => setState(() => selectedIndex = 0),
+//                       child: Column(
+//                         children: [
+//                           Container(
+//                             width: 60 * scaleFactor,
+//                             height: 60 * scaleFactor,
+//                             decoration: BoxDecoration(
+//                               shape: BoxShape.circle,
+//                               color:
+//                                   selectedIndex == 0
+//                                       ? Colors.black
+//                                       : Colors.transparent,
+//                             ),
+//                             child: Image.asset(
+//                               "assets/images/icon_images/home.png",
+//                               color:
+//                                   selectedIndex == 0
+//                                       ? Color.fromRGBO(224, 180, 32, 1)
+//                                       : Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           if (selectedIndex != 0) SizedBox(height: 4),
+//                           if (selectedIndex != 0)
+//                             Text(
+//                               "Home",
+//                               style: TextStyle(
+//                                 fontSize: 12,
+//                                 color: Color.fromRGBO(136, 145, 165, 1),
+//                                 fontFamily: "Manrope",
+//                                 fontWeight: FontWeight.w500,
+//                               ),
+//                             ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+
+//                   // CATEGORY
+//                   Positioned(
+//                     top: selectedIndex == 1 ? 0 : 14 * scaleFactor,
+//                     left: 110 * scaleFactor,
+//                     child: GestureDetector(
+//                       onTap: () => setState(() => selectedIndex = 1),
+//                       child: Column(
+//                         children: [
+//                           Container(
+//                             width: 60 * scaleFactor,
+//                             height: 60 * scaleFactor,
+//                             decoration: BoxDecoration(
+//                               shape: BoxShape.circle,
+//                               color:
+//                                   selectedIndex == 1
+//                                       ? Colors.black
+//                                       : Colors.transparent,
+//                             ),
+//                             child: Image.asset(
+//                               "assets/images/icon_images/Category.png",
+//                               color:
+//                                   selectedIndex == 1
+//                                       ? Color.fromRGBO(224, 180, 32, 1)
+//                                       : Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           if (selectedIndex != 1) SizedBox(height: 4),
+//                           if (selectedIndex != 1)
+//                             Text(
+//                               "Category",
+//                               style: TextStyle(
+//                                 fontSize: 12,
+//                                 color: Color.fromRGBO(136, 145, 165, 1),
+//                                 fontFamily: "Manrope",
+//                                 fontWeight: FontWeight.w500,
+//                               ),
+//                             ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+
+//                   // FAVOURITE
+//                   Positioned(
+//                     top: selectedIndex == 2 ? 0 : 14 * scaleFactor,
+//                     left: 210 * scaleFactor,
+//                     child: GestureDetector(
+//                       onTap: () => setState(() => selectedIndex = 2),
+//                       child: Column(
+//                         children: [
+//                           Container(
+//                             width: 60 * scaleFactor,
+//                             height: 60 * scaleFactor,
+//                             decoration: BoxDecoration(
+//                               shape: BoxShape.circle,
+//                               color:
+//                                   selectedIndex == 2
+//                                       ? Colors.black
+//                                       : Colors.transparent,
+//                             ),
+//                             child: Image.asset(
+//                               "assets/images/icon_images/Heart.png",
+//                               color:
+//                                   selectedIndex == 2
+//                                       ? Color.fromRGBO(224, 180, 32, 1)
+//                                       : Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           if (selectedIndex != 2) SizedBox(height: 4),
+//                           if (selectedIndex != 2)
+//                             Text(
+//                               "Favourite",
+//                               style: TextStyle(
+//                                 fontSize: 12,
+//                                 color: Color.fromRGBO(136, 145, 165, 1),
+//                                 fontFamily: "Manrope",
+//                                 fontWeight: FontWeight.w500,
+//                               ),
+//                             ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+
+//                   // MORE
+//                   Positioned(
+//                     top: selectedIndex == 3 ? 0 : 14 * scaleFactor,
+//                     left: 290 * scaleFactor,
+//                     child: GestureDetector(
+//                       onTap: () => setState(() => selectedIndex = 3),
+//                       child: Column(
+//                         children: [
+//                           Container(
+//                             width: 60 * scaleFactor,
+//                             height: 60 * scaleFactor,
+//                             decoration: BoxDecoration(
+//                               shape: BoxShape.circle,
+//                               color:
+//                                   selectedIndex == 3
+//                                       ? Colors.black
+//                                       : Colors.transparent,
+//                             ),
+//                             child: Image.asset(
+//                               "assets/images/icon_images/more_vertical.png",
+//                               color:
+//                                   selectedIndex == 3
+//                                       ? Color.fromRGBO(224, 180, 32, 1)
+//                                       : Color.fromRGBO(62, 69, 84, 1),
+//                             ),
+//                           ),
+//                           if (selectedIndex != 3) SizedBox(height: 4),
+//                           if (selectedIndex != 3)
+//                             Text(
+//                               "More",
+//                               style: TextStyle(
+//                                 fontSize: 12,
+//                                 color: Color.fromRGBO(136, 145, 165, 1),
+//                                 fontFamily: "Manrope",
+//                                 fontWeight: FontWeight.w500,
+//                               ),
+//                             ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+  final int selectedIndex;
+  const BottomNavBar({super.key, required this.selectedIndex});
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int selectedIndex = 0;
+  late int selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedIndex = widget.selectedIndex;
+  }
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final scaleFactor = screenWidth / 375;
 
-    return SafeArea(
-      bottom: true,
+    return Container(
+      height: 103 * scaleFactor, // جتنا آپ نے دیا تھا
+      decoration: BoxDecoration(
+        // color: Colors.white,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+      ),
       child: Stack(
         children: [
           Positioned(
-            bottom: 0,
+            top: 14 * scaleFactor,
+            left: 0,
+            right: 0,
             child: Container(
-              width: 375 * scaleFactor,
-              height: 103 * scaleFactor,
-              child: Stack(
+              height: 89 * scaleFactor,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Color.fromRGBO(248, 247, 251, 1),
+              ),
+            ),
+          ),
+
+          // HOME
+          Positioned(
+            top: selectedIndex == 0 ? 0 : 14 * scaleFactor,
+            left: 25 * scaleFactor,
+            child: GestureDetector(
+              onTap: () {
+                setState(() => selectedIndex = 0);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThirdScreen()),
+                );
+              },
+              child: Column(
                 children: [
-                  // Background box
-                  Positioned(
-                    top: 14 * scaleFactor,
-                    child: Container(
-                      width: 375 * scaleFactor,
-                      height: 89 * scaleFactor,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color.fromRGBO(255, 255, 255, 1),
-                      ),
+                  Container(
+                    width: 60 * scaleFactor,
+                    height: 60 * scaleFactor,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          selectedIndex == 0
+                              ? Colors.black
+                              : Colors.transparent,
+                    ),
+                    child: Image.asset(
+                      "assets/images/icon_images/home.png",
+                      color:
+                          selectedIndex == 0
+                              ? Color.fromRGBO(224, 180, 32, 1)
+                              : Color.fromRGBO(62, 69, 84, 1),
                     ),
                   ),
+                  if (selectedIndex != 0) SizedBox(height: 4),
+                  if (selectedIndex != 0)
+                    Text(
+                      "Home",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color.fromRGBO(136, 145, 165, 1),
+                        fontFamily: "Manrope",
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ),
 
-                  // HOME
-                  Positioned(
-                    top: selectedIndex == 0 ? 0 : 14 * scaleFactor,
-                    left: 25 * scaleFactor,
-                    child: GestureDetector(
-                      onTap: () => setState(() => selectedIndex = 0),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 60 * scaleFactor,
-                            height: 60 * scaleFactor,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color:
-                                  selectedIndex == 0
-                                      ? Colors.black
-                                      : Colors.transparent,
-                            ),
-                            child: Image.asset(
-                              "assets/images/icon_images/home.png",
-                              color:
-                                  selectedIndex == 0
-                                      ? Color.fromRGBO(224, 180, 32, 1)
-                                      : Color.fromRGBO(62, 69, 84, 1),
-                            ),
-                          ),
-                          if (selectedIndex != 0) SizedBox(height: 4),
-                          if (selectedIndex != 0)
-                            Text(
-                              "Home",
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromRGBO(136, 145, 165, 1),
-                                fontFamily: "Manrope",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                        ],
-                      ),
+          // CATEGORY
+          Positioned(
+            top: selectedIndex == 1 ? 0 : 14 * scaleFactor,
+            left: 110 * scaleFactor,
+            child: GestureDetector(
+              onTap: () {
+                setState(() => selectedIndex = 1);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FourthScreen()),
+                );
+              },
+              child: Column(
+                children: [
+                  Container(
+                    width: 60 * scaleFactor,
+                    height: 60 * scaleFactor,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          selectedIndex == 1
+                              ? Colors.black
+                              : Colors.transparent,
+                    ),
+                    child: Image.asset(
+                      "assets/images/icon_images/Category.png",
+                      color:
+                          selectedIndex == 1
+                              ? Color.fromRGBO(224, 180, 32, 1)
+                              : Color.fromRGBO(62, 69, 84, 1),
                     ),
                   ),
+                  if (selectedIndex != 1) SizedBox(height: 4),
+                  if (selectedIndex != 1)
+                    Text(
+                      "Category",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color.fromRGBO(136, 145, 165, 1),
+                        fontFamily: "Manrope",
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ),
 
-                  // CATEGORY
-                  Positioned(
-                    top: selectedIndex == 1 ? 0 : 14 * scaleFactor,
-                    left: 110 * scaleFactor,
-                    child: GestureDetector(
-                      onTap: () => setState(() => selectedIndex = 1),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 60 * scaleFactor,
-                            height: 60 * scaleFactor,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color:
-                                  selectedIndex == 1
-                                      ? Colors.black
-                                      : Colors.transparent,
-                            ),
-                            child: Image.asset(
-                              "assets/images/icon_images/Category.png",
-                              color:
-                                  selectedIndex == 1
-                                      ? Color.fromRGBO(224, 180, 32, 1)
-                                      : Color.fromRGBO(62, 69, 84, 1),
-                            ),
-                          ),
-                          if (selectedIndex != 1) SizedBox(height: 4),
-                          if (selectedIndex != 1)
-                            Text(
-                              "Category",
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromRGBO(136, 145, 165, 1),
-                                fontFamily: "Manrope",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                        ],
-                      ),
+          // FAVOURITE
+          Positioned(
+            top: selectedIndex == 2 ? 0 : 14 * scaleFactor,
+            left: 210 * scaleFactor,
+            child: GestureDetector(
+              onTap: () => setState(() => selectedIndex = 2),
+              child: Column(
+                children: [
+                  Container(
+                    width: 60 * scaleFactor,
+                    height: 60 * scaleFactor,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          selectedIndex == 2
+                              ? Colors.black
+                              : Colors.transparent,
+                    ),
+                    child: Image.asset(
+                      "assets/images/icon_images/Heart.png",
+                      color:
+                          selectedIndex == 2
+                              ? Color.fromRGBO(224, 180, 32, 1)
+                              : Color.fromRGBO(62, 69, 84, 1),
                     ),
                   ),
+                  if (selectedIndex != 2) SizedBox(height: 4),
+                  if (selectedIndex != 2)
+                    Text(
+                      "Favourite",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color.fromRGBO(136, 145, 165, 1),
+                        fontFamily: "Manrope",
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ),
 
-                  // FAVOURITE
-                  Positioned(
-                    top: selectedIndex == 2 ? 0 : 14 * scaleFactor,
-                    left: 210 * scaleFactor,
-                    child: GestureDetector(
-                      onTap: () => setState(() => selectedIndex = 2),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 60 * scaleFactor,
-                            height: 60 * scaleFactor,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color:
-                                  selectedIndex == 2
-                                      ? Colors.black
-                                      : Colors.transparent,
-                            ),
-                            child: Image.asset(
-                              "assets/images/icon_images/Heart.png",
-                              color:
-                                  selectedIndex == 2
-                                      ? Color.fromRGBO(224, 180, 32, 1)
-                                      : Color.fromRGBO(62, 69, 84, 1),
-                            ),
-                          ),
-                          if (selectedIndex != 2) SizedBox(height: 4),
-                          if (selectedIndex != 2)
-                            Text(
-                              "Favourite",
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromRGBO(136, 145, 165, 1),
-                                fontFamily: "Manrope",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                        ],
-                      ),
+          // MORE
+          Positioned(
+            top: selectedIndex == 3 ? 0 : 14 * scaleFactor,
+            left: 290 * scaleFactor,
+            child: GestureDetector(
+              onTap: () => setState(() => selectedIndex = 3),
+              child: Column(
+                children: [
+                  Container(
+                    width: 60 * scaleFactor,
+                    height: 60 * scaleFactor,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          selectedIndex == 3
+                              ? Colors.black
+                              : Colors.transparent,
+                    ),
+                    child: Image.asset(
+                      "assets/images/icon_images/more_vertical.png",
+                      color:
+                          selectedIndex == 3
+                              ? Color.fromRGBO(224, 180, 32, 1)
+                              : Color.fromRGBO(62, 69, 84, 1),
                     ),
                   ),
-
-                  // MORE
-                  Positioned(
-                    top: selectedIndex == 3 ? 0 : 14 * scaleFactor,
-                    left: 290 * scaleFactor,
-                    child: GestureDetector(
-                      onTap: () => setState(() => selectedIndex = 3),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 60 * scaleFactor,
-                            height: 60 * scaleFactor,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color:
-                                  selectedIndex == 3
-                                      ? Colors.black
-                                      : Colors.transparent,
-                            ),
-                            child: Image.asset(
-                              "assets/images/icon_images/more_vertical.png",
-                              color:
-                                  selectedIndex == 3
-                                      ? Color.fromRGBO(224, 180, 32, 1)
-                                      : Color.fromRGBO(62, 69, 84, 1),
-                            ),
-                          ),
-                          if (selectedIndex != 3) SizedBox(height: 4),
-                          if (selectedIndex != 3)
-                            Text(
-                              "More",
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromRGBO(136, 145, 165, 1),
-                                fontFamily: "Manrope",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                        ],
+                  if (selectedIndex != 3) SizedBox(height: 4),
+                  if (selectedIndex != 3)
+                    Text(
+                      "More",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color.fromRGBO(136, 145, 165, 1),
+                        fontFamily: "Manrope",
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
-                  ),
                 ],
               ),
             ),
@@ -580,7 +810,7 @@ class CategoryCard extends StatelessWidget {
         height: 164,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: Color.fromRGBO(171, 175, 181, 1),
+          color: Color.fromRGBO(238, 242, 247, 1),
         ),
         child: Column(
           children: [
@@ -588,7 +818,7 @@ class CategoryCard extends StatelessWidget {
             Container(
               width: 68,
               height: 68,
-              color: Colors.black,
+              // color: Colors.black,
               child: Image.asset("assets/images/icon_images/Group.png"),
             ),
             SizedBox(height: 10),
@@ -599,8 +829,9 @@ class CategoryCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              width: 40,
+              width: MediaQuery.of(context).size.width,
               height: 18,
+              alignment: Alignment.center,
               child: Text(
                 categoryName,
                 style: TextStyle(
@@ -613,15 +844,17 @@ class CategoryCard extends StatelessWidget {
             ),
             SizedBox(height: 5),
             Container(
-              width: 53,
+              width: MediaQuery.of(context).size.width,
               height: 16,
+              // color: Colors.amber,
+              alignment: Alignment.center,
               child: Text(
                 categoryTypeName,
                 style: TextStyle(
                   fontSize: 12,
                   fontFamily: "Manrope",
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  fontWeight: FontWeight.w100,
+                  color: Color.fromRGBO(97, 106, 125, 1),
                 ),
               ),
             ),

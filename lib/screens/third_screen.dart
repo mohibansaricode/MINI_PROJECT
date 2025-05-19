@@ -1,4 +1,3 @@
-
 // Responsive Layout
 
 import 'package:flutter/material.dart';
@@ -346,13 +345,11 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   ),
                 ),
               ),
-
-              // Bottom Nav Bar
-              BottomNavBar(),
             ],
           );
         },
       ),
+      bottomNavigationBar: const BottomNavBar(selectedIndex: 0),
     );
   }
 }

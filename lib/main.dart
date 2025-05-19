@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FourthScreen(),
-      // home: PageView(children: [FirstScreen(), SecondScreen()]),
+      // home: FourthScreen(),
+      home: PageView(children: [FirstScreen(), SecondScreen()]),
     );
   }
 }
