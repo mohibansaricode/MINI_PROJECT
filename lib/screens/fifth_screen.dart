@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/widgets/custom_widgets.dart';
 
 class FifthScreen extends StatelessWidget {
   final int addToCartNumber = 1;
@@ -98,6 +99,296 @@ class FifthScreen extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+            ),
+          ),
+
+          // buttons
+          Positioned(
+            top: 122,
+            left: 24,
+            child: Container(
+              width: 372,
+              height: 36,
+              // color: Colors.amber,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    //1st
+                    Container(
+                      width: 84,
+                      height: 36,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromRGBO(249, 176, 35, 1),
+                      ),
+                      child: Text(
+                        "Popular",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Manrope",
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    //2nd
+                    Container(
+                      width: 104,
+                      height: 36,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        // color: Color.fromRGBO(249, 176, 35, 1),
+                        border: Border.all(
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Text(
+                        "Low Price",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Manrope",
+                          fontWeight: FontWeight.w300,
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    //3rd
+                    Container(
+                      width: 124,
+                      height: 36,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        // color: Color.fromRGBO(249, 176, 35, 1),
+                        border: Border.all(
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Text(
+                        "Small Fishes",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Manrope",
+                          fontWeight: FontWeight.w300,
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    //4th
+                    Container(
+                      width: 104,
+                      height: 36,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        // color: Color.fromRGBO(249, 176, 35, 1),
+                        border: Border.all(
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Text(
+                        "Big Fishes",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Manrope",
+                          fontWeight: FontWeight.w300,
+                          color: Color.fromRGBO(178, 187, 206, 1),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          //products
+          Positioned(
+            top: 173,
+            left: 20,
+            bottom: 0,
+            child: Container(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 200,
+                      // color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.amber,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                          SizedBox(width: 35),
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.black,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 200,
+                      // color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.amber,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                          SizedBox(width: 35),
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.black,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 200,
+                      // color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.amber,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                          SizedBox(width: 35),
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.black,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 200,
+                      // color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.amber,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                          SizedBox(width: 35),
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.black,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 327,
+                      height: 200,
+                      // color: Colors.red,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.amber,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                          SizedBox(width: 35),
+                          Container(
+                            width: 128,
+                            height: 194,
+                            // color: Colors.black,
+                            child: RecommendedCard(
+                              productName: "Meat",
+                              productType: "Organic",
+                              productPrice: "\$10",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                  ],
+                ),
               ),
             ),
           ),
