@@ -92,6 +92,18 @@ class _FourthScreenState extends State<FourthScreen> {
                   ),
                 ),
               ),
+
+              Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      width: 327 * scaleFactor,
+                      height: 164 * scaleFactor,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
             ],
           );
         },
