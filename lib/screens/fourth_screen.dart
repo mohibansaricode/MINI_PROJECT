@@ -270,7 +270,26 @@ class _FourthScreenState extends State<FourthScreen> {
                 child: Column(
                   children: [
                     SizedBox(height: 20),
-                    Container(width: 327, height: 164, color: Colors.red),
+                    Container(
+                      width: 327,
+                      height: 164,
+                      color: Colors.red,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.amber,
+                          ),
+                          SizedBox(width: 19),
+                          Container(
+                            width: 154,
+                            height: 164,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
