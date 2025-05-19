@@ -240,40 +240,7 @@ class FifthScreen extends StatelessWidget {
                               productPrice: "\$10",
                             ),
                           ),
-                          SizedBox(width: 35),
-                          Container(
-                            width: 128,
-                            height: 194,
-                            // color: Colors.black,
-                            child: RecommendedCard(
-                              productName: "Meat",
-                              productType: "Organic",
-                              productPrice: "\$10",
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    SizedBox(height: 20),
-                    Container(
-                      width: 327,
-                      height: 200,
-                      // color: Colors.red,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 128,
-                            height: 194,
-                            // color: Colors.amber,
-                            child: RecommendedCard(
-                              productName: "Meat",
-                              productType: "Organic",
-                              productPrice: "\$10",
-                            ),
-                          ),
-                          SizedBox(width: 35),
+                          SizedBox(width: 3),
                           Container(
                             width: 128,
                             height: 194,
