@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/screens/first_screen.dart';
+import 'package:mini_project/screens/fourth_screen.dart';
 import 'package:mini_project/screens/second-screen.dart';
-import 'package:mini_project/screens/third_screen.dart';
-import 'package:mini_project/widgets/custom_widgets.dart';
 import 'package:flutter/services.dart';
 
 void main() {
@@ -19,7 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PageView(children: [FirstScreen(), SecondScreen()]),
+      home: FourthScreen(),
+      // home: PageView(children: [FirstScreen(), SecondScreen()]),
     );
   }
 }
