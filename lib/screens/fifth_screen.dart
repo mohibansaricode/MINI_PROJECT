@@ -240,7 +240,7 @@ class FifthScreen extends StatelessWidget {
                               productPrice: "\$10",
                             ),
                           ),
-                          SizedBox(width: 3),
+                          SizedBox(width: 35),
                           Container(
                             width: 128,
                             height: 194,
