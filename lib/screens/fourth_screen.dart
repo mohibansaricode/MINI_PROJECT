@@ -40,9 +40,7 @@ class _FourthScreenState extends State<FourthScreen> {
                 left: 280 * scaleFactor,
                 child: GestureDetector(
                   onTap: () {
-                    setState(() {
-                      
-                    });
+                    setState(() {});
                   },
                   child: Container(
                     width: 18 * scaleFactor,
@@ -56,9 +54,44 @@ class _FourthScreenState extends State<FourthScreen> {
                 ),
               ),
 
-
               //TEXT container
-              
+              Positioned(
+                top: 98 * scaleFactor,
+                left: 20 * scaleFactor,
+                child: Container(
+                  width: 350 * scaleFactor,
+                  height: 148 * scaleFactor,
+                  // color: Colors.black54,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Shop",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontFamily: "Manrope",
+                            fontWeight: FontWeight.w100,
+                            color: Color.fromRGBO(250, 251, 253, 1),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Text(
+                          "By Category",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontFamily: "Manrope",
+                            fontWeight: FontWeight.w900,
+                            color: Color.fromRGBO(250, 251, 253, 1),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           );
         },
