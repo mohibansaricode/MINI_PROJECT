@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/screens/products/female.dart';
+import 'package:mini_project/screens/products/mens.dart';
+import 'package:mini_project/screens/products/products.dart';
 import 'package:mini_project/widgets/custom_widgets.dart';
 
 class FourthScreen extends StatefulWidget {
@@ -98,23 +101,47 @@ class _FourthScreenState extends State<FourthScreen> {
                         // color: Colors.red,
                         child: Row(
                           children: [
-                            Container(
-                              width: 154,
-                              height: 164,
-                              // color: Colors.amber,
-                              child: CategoryCard(
-                                categoryName: "Meats",
-                                categoryTypeName: "Organic",
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => Mens(),
+                                    ),
+                                  );
+                                });
+                              },
+                              child: Container(
+                                width: 154,
+                                height: 164,
+                                // color: Colors.amber,
+                                child: CategoryCard(
+                                  categoryName: "Mens",
+                                  categoryTypeName: "Khaadi",
+                                ),
                               ),
                             ),
                             SizedBox(width: 19),
-                            Container(
-                              width: 154,
-                              height: 164,
-                              // color: Colors.black,
-                              child: CategoryCard(
-                                categoryName: "Fishes",
-                                categoryTypeName: "From Sea",
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => Womens(),
+                                    ),
+                                  );
+                                });
+                              },
+                              child: Container(
+                                width: 154,
+                                height: 164,
+                                // color: Colors.black,
+                                child: CategoryCard(
+                                  categoryName: "Womens",
+                                  categoryTypeName: "edenrobe",
+                                ),
                               ),
                             ),
                           ],

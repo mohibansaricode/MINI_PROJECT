@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/screens/category.dart';
+import 'package:mini_project/screens/products/mens.dart';
 import 'package:mini_project/widgets/custom_widgets.dart';
 
 class FifthScreen extends StatelessWidget {
   final int addToCartNumber = 1;
-  const FifthScreen({super.key});
+  final String headingCategory;
+  const FifthScreen({super.key, required this.headingCategory});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.3,
+      width: double.infinity,
+      child: Stack(
         children: [
           Positioned(
             top: 52,
@@ -21,6 +26,12 @@ class FifthScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
+                    onTap: () {
+                      Navigator.pop(
+                        context,
+                        MaterialPageRoute(builder: (context) => FourthScreen()),
+                      );
+                    },
                     child: Container(
                       width: 40,
                       height: 40,
@@ -37,7 +48,7 @@ class FifthScreen extends StatelessWidget {
                     height: 24,
                     // color: Colors.black,
                     child: Text(
-                      "Big & Small Fishes",
+                      "$headingCategory",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: "Manrope",
@@ -105,7 +116,7 @@ class FifthScreen extends StatelessWidget {
 
           // buttons
           Positioned(
-            top: 122,
+            top: 130,
             left: 24,
             child: Container(
               width: 372,
@@ -207,54 +218,6 @@ class FifthScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 20),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          //products
-          Positioned(
-            top: 173,
-            left: 20,
-            bottom: 0,
-            child: Container(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(height: 20),
-                    Container(
-                      width: 327,
-                      height: 200,
-                      // color: Colors.red,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 128,
-                            height: 194,
-                            // color: Colors.amber,
-                            child: RecommendedCard(
-                              productName: "Meat",
-                              productType: "Organic",
-                              productPrice: "\$10",
-                            ),
-                          ),
-                          SizedBox(width: 35),
-                          Container(
-                            width: 128,
-                            height: 194,
-                            // color: Colors.black,
-                            child: RecommendedCard(
-                              productName: "Meat",
-                              productType: "Organic",
-                              productPrice: "\$10",
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20),
                   ],
                 ),
               ),

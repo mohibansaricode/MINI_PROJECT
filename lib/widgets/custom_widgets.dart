@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/screens/fourth_screen.dart';
-import 'package:mini_project/screens/third_screen.dart';
+import 'package:mini_project/screens/category.dart';
+import 'package:mini_project/screens/home.dart';
 
 class GroupOne extends StatefulWidget {
   const GroupOne({super.key});
@@ -401,7 +401,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 setState(() => selectedIndex = 0);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ThirdScreen()),
+                  MaterialPageRoute(builder: (context) => Home()),
                 );
               },
               child: Column(

@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/widgets/custom_widgets.dart';
 
-class ThirdScreen extends StatefulWidget {
-  const ThirdScreen({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<ThirdScreen> createState() => _ThirdScreenState();
+  State<Home> createState() => _HomeState();
 }
 
-class _ThirdScreenState extends State<ThirdScreen> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/screens/fifth_screen.dart';
+// import 'package:mini_project/screens/products/mens.dart';
+// import 'package:mini_project/screens/products/products.dart';
 import 'package:mini_project/screens/first_screen.dart';
-import 'package:mini_project/screens/fourth_screen.dart';
+import 'package:mini_project/screens/products/female.dart';
+import 'package:mini_project/screens/products/mens.dart';
+import 'package:mini_project/screens/products/products.dart';
+// import 'package:mini_project/screens/category.dart';
 import 'package:mini_project/screens/second-screen.dart';
 import 'package:flutter/services.dart';
-import 'package:mini_project/widgets/custom_widgets.dart';
+// import 'package:mini_project/widgets/custom_widgets.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,9 +24,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: FourthScreen(),
-      // home: PageView(children: [FirstScreen(), SecondScreen()]),
-      home: FifthScreen(),
+      // home: FifthScreen(headingCategory: "mens"),
+      home: PageView(children: [FirstScreen(), SecondScreen()]),
+      // home: Womens(),
     );
   }
 }
