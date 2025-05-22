@@ -8,6 +8,7 @@ import 'package:mini_project/screens/products/products.dart';
 // import 'package:mini_project/screens/category.dart';
 import 'package:mini_project/screens/second-screen.dart';
 import 'package:flutter/services.dart';
+import 'package:mini_project/widgets/custom_widgets.dart';
 // import 'package:mini_project/widgets/custom_widgets.dart';
 
 void main() {
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: FifthScreen(headingCategory: "mens"),
-      home: PageView(children: [FirstScreen(), SecondScreen()]),
-      // home: Womens(),
+      // home: PageView(children: [FirstScreen(), SecondScreen()]),
+      home: ProductImagesSlider(),
     );
   }
 }
 
+//

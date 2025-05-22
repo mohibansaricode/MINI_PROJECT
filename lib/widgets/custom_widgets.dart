@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/screens/category.dart';
 import 'package:mini_project/screens/home.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class GroupOne extends StatefulWidget {
   const GroupOne({super.key});
@@ -644,6 +645,46 @@ class CategoryCard extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ProductImagesSlider extends StatefulWidget {
+  @override
+  _ProductImagesSliderState createState() => _ProductImagesSliderState();
+}
+
+class _ProductImagesSliderState extends State<ProductImagesSlider> {
+  final controller = PageController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(
+            height: 300,
+            child: PageView(
+              controller: controller,
+              children: [
+                Image.asset('assets/images/screen_one_image.jpg'),
+                Image.asset('assets/images/screen_two_image.jpg'),
+                Image.asset('assets/images/shopping_banner.jpg'),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          SmoothPageIndicator(
+            controller: controller,
+            count: 3,
+            effect: WormEffect(
+              dotHeight: 10,
+              dotWidth: 10,
+              activeDotColor: Colors.blue,
+            ),
+          ),
+        ],
       ),
     );
   }
