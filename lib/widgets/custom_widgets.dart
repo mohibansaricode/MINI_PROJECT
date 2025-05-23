@@ -661,31 +661,40 @@ class _ProductImagesSliderState extends State<ProductImagesSlider> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 300,
-            child: PageView(
+      body: Container(
+        margin: EdgeInsets.only(top: 85),
+        width: double.infinity,
+        height: 280,
+        color: Colors.amber,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 250,
+              child: PageView(
+                controller: controller,
+                children: [
+                  Image.asset('assets/images/screen_one_image.jpg'),
+                  Image.asset('assets/images/screen_two_image.jpg'),
+                  Image.asset('assets/images/shopping_banner.jpg'),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            SmoothPageIndicator(
               controller: controller,
-              children: [
-                Image.asset('assets/images/screen_one_image.jpg'),
-                Image.asset('assets/images/screen_two_image.jpg'),
-                Image.asset('assets/images/shopping_banner.jpg'),
-              ],
+              count: 3,
+              effect: WormEffect(
+                dotHeight: 3,
+                dotWidth: 19,
+                activeDotColor: Color.fromRGBO(249, 176, 35, 1),
+              ),
             ),
-          ),
-          SizedBox(height: 10),
-          SmoothPageIndicator(
-            controller: controller,
-            count: 3,
-            effect: WormEffect(
-              dotHeight: 10,
-              dotWidth: 10,
-              activeDotColor: Colors.blue,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+
+
+//1
