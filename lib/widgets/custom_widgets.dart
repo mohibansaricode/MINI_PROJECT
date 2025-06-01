@@ -696,4 +696,4 @@ class _ProductImagesSliderState extends State<ProductImagesSlider> {
   }
 }
 
-// 123
+// 12
